@@ -1,0 +1,150 @@
+.pageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top to see start of form */
+    min-height: 90vh; 
+    padding: 40px 20px;
+}
+
+.formCard {
+    background-color: #2A2F33; 
+    color: #EAEAEA;             
+    font-family: 'Roboto Mono', monospace;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px; /* Wider card for two columns */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 25px 40px; /* Row gap and Column gap */
+}
+
+.fieldBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fieldBlock.fullWidth {
+    grid-column: 1 / -1; /* Make an item span both columns */
+}
+
+.fieldBlock label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.fieldBlock input,
+.fieldBlock textarea {
+    background-color: #1a1d21; 
+    border: 1px solid #3e444a;
+    border-radius: 6px;
+    padding: 12px;
+    color: #EAEAEA;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    resize: vertical;
+}
+
+.fieldBlock input:focus,
+.fieldBlock textarea:focus {
+    border-color: #7b818a; 
+}
+
+.addressTitle {
+    padding: 1rem 0rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: -10px;
+    color: #b0b0b0;
+    grid-column: 1 / -1; /* Span both columns */
+}
+
+.errorMessage {
+    grid-column: 1 / -1;
+    color: #ff8a8a;
+    background-color: rgba(255, 100, 100, 0.1);
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+}
+
+.submitBtn {
+    grid-column: 1 / -1;
+    background-color: #EAEAEA; 
+    color: #2A2F33;            
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+.submitBtn:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+.AiBlock{
+    margin-top: 2rem;
+    grid-column: 1 / -1;
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+}
+.AiBlock .submitBtn{
+    grid-column: 1 / -1;
+    display: flex;
+    width:100%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInOnLoad {
+  opacity: 0;
+}
+
+.visible {
+  animation: fadeInUp 0.7s ease-out forwards;
+}

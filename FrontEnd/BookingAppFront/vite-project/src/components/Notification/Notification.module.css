@@ -1,0 +1,93 @@
+.Notification {
+    position: fixed;
+    bottom: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18rem;
+    /* height: ; */
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 0.2rem solid transparent;
+    background-image:
+        linear-gradient(#2a2f33, #2a2f33),
+        linear-gradient(to right, #4a525a, #EAEAEA),
+        linear-gradient(to left, #4a525a, #EAEAEA);
+    background-origin: border-box;
+    background-clip: padding-box, border-box, border-box;
+    background-repeat: no-repeat;
+    background-position: center, left, right;
+    background-size: 100% 100%, 0% 100%, 0% 100%;
+    transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+    
+}
+.exiting {
+    transform: translateX(100vw);
+    opacity: 0;
+}
+
+.animateBorder {
+    background-size: 100% 100%, 50.5% 100%, 50.5% 100%;
+}
+
+.notificationBox {
+    width: 100%;
+    height: 2.5rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-size: 0% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: background-size 0.4s ease-in-out;
+}
+
+.icon{
+    color: #5a4a4a; 
+    transition: color 0.5s ease-out;
+    position: relative;
+    z-index: 2;
+}
+
+.animateBorder .icon {
+    color: #EAEAEA;
+}
+
+.line{
+    height:0.25rem;
+    width:100%;
+    background-image: linear-gradient(to left, #4a525a, #EAEAEA, #4a525a);
+
+    transform-origin: left right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+.animateBorder .line{
+    transform:scaleX(1);
+}
+
+.MessageBox {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #EAEAEA;
+    box-sizing: border-box;
+    padding: 1rem;
+    font-family: "Roboto Mono";
+    font-size: 1rem;
+}
+
+.fillContent {
+    background-size: 100% 100%;
+}
+
+.successFill {
+    background-image: linear-gradient(to right,#1a9748);
+}
+
+.errorFill {
+    background-image: linear-gradient(to right,#e94444);
+}

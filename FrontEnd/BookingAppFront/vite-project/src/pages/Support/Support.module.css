@@ -1,0 +1,231 @@
+.supportContainer{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family:"Roboto Mono";
+    max-width: 1600px;
+    color:#EAEAEA;
+    gap:5rem;
+}
+.heroSection{
+    width:100%;
+    gap:3rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heroSection h1{
+    margin-top:3rem;
+    font-size:1.4rem;
+}
+.heroSection h2{
+    font-size:1.1rem;
+    text-align: center;
+    line-height: 1.2;
+}
+.heroSection strong{
+    font-weight:700;
+    color:#87CEEB;
+}
+.searchBar {
+    max-width:20rem;
+    flex-grow:1;
+    width: 100%;
+    margin: 0 auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchInput{
+    width: 100%;
+    height: 2rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+    border: 0.1rem solid #EAEAEA;
+    border-radius: 5px;
+}
+.searchInput:focus {
+    outline: none;
+    border-color: #87CEEB;
+}
+
+.faqCategories{
+    width:100%;
+    gap:3rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+}
+.faqCategories h2{
+    font-size:1.1rem;
+}
+.faqBox{
+    display:flex;
+    flex-direction: row;
+    gap:1rem;
+}
+.categoryCard{
+    width:100%;
+    min-width: 16rem;
+    min-height:5rem;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    
+    background-color:#2A2F33;
+    border-radius: 1rem;
+}
+.categoryCard h3{
+  font-size:1.2rem;
+}
+.categoryIconWrapper{
+  
+}
+.categoryIconWrapper .icon{
+  font-size:1.3rem;
+}
+.categoryCard:hover{
+    background-color:#323841;
+    transform: scale(1.03);
+    cursor:pointer;
+    transition: 0.1s;
+}
+
+.accordionGroup{
+    width:100%;
+    gap:3rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.accordionGroup h2{
+    font-size:1.1rem;
+}
+.popUpBox{
+    width:100%;
+    max-width:50rem;
+    min-width:25rem;
+    display:flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+.accordionQuestion{
+    width:100%;
+    display:flex;
+    padding:1rem;
+    background-color:#2A2F33;
+    font-size:1rem;
+    font-family: "Roboto Mono";
+    color:#EAEAEA;
+    border-style:none;
+}
+.iconContainer{
+    height:100%;
+    margin-left:auto;
+}
+.accordionQuestion:focus{
+    outline: none;
+}
+.accordionQuestion:hover{
+    cursor: pointer;
+}
+.accordionAnswer{
+    background-color: #2A2F33;
+    border-top: 1px solid #EAEAEA;
+    padding:1rem;
+}
+
+.accordionItem .minus {
+  display: none;
+}
+.accordionItem .plus {
+  display: block;
+}
+
+.accordionItem.open .minus {
+  display: block;
+}
+.accordionItem.open .plus {
+  display: none;
+}
+.ContactPrompt{
+    display:flex;
+    flex-direction: column;
+    gap:3rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:5rem;
+}
+.ContactPrompt h3{
+  text-align: center;
+}
+.contactButton{
+    background-color:#2A2F33;
+    color:#EAEAEA;
+    padding:1rem 2rem;
+    border-radius: 1rem;
+    text-decoration-line: none;
+}
+.contactButton:hover{
+    background-color:#323841;
+    transform: scale(1.03);
+    cursor:pointer;
+    transition: 0.1s;
+}
+
+.noResults{
+    width:90%;
+    height:auto;
+    background-color:#323841;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+    margin: 0 auto;
+    border-radius: 1rem; 
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInOnLoad {
+  opacity: 0;
+}
+
+.fadeInOnLoad.visible {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .heroSection h2{
+    margin:0rem 2rem;
+  }
+  .faqCategories .faqBox{
+    display:flex;
+    flex-direction: column;
+    width:calc(100% - 4rem);
+    margin:0rem 2rem;
+  }
+  .accordionGroup{
+    width:calc(100% - 4rem);
+    margin:0rem 2rem;
+  }
+}

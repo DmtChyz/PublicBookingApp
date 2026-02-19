@@ -1,0 +1,136 @@
+.eventsSection {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.eventsTitle {
+    color: #EAEAEA;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #424b54;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.noEvents {
+    color: #B0B0B0;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.noEvents a {
+    color: #51cf66;
+    text-decoration: underline;
+}
+
+.eventGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.eventCard {
+    background-color: #2A2F33;
+    border: 1px solid #424b54;
+    border-radius: 0.8rem;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.eventCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.eventImage {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.eventContent {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.eventTitle {
+    color: #EAEAEA;
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+}
+
+.eventDetail {
+    color: #B0B0B0;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.eventDetail span {
+    color: #EAEAEA;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.cardActions {
+    margin-top: auto;
+    padding-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.actionBtn {
+    flex-grow: 1;
+    padding: 0.5rem;
+    background-color: #424b54;
+    border: 1px solid #424b54;
+    color: #EAEAEA;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.actionBtn:hover {
+    background-color: #51cf66;
+    border-color: #51cf66;
+    color: #2A2F33;
+}
+
+.viewBtn {
+    background-color: transparent;
+}
+
+.viewBtn:hover {
+    background-color: #424b54;
+    color: #EAEAEA;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInOnLoad {
+  opacity: 0;
+}
+
+.visible {
+  animation: fadeInUp 2.1s ease-out forwards;
+}

@@ -1,0 +1,141 @@
+.Card{
+    width:40rem;
+    height:15rem;
+    display:flex;
+    border-radius: 0.5rem;
+    background-color: #EAEAEA;
+    box-sizing: border-box;
+}
+
+.CardImage {
+    width: 40%;
+    flex-shrink: 0;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    overflow: hidden;
+}
+
+.CardImage img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.CardInfoBox{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:1rem;
+    color: #424b54;
+    flex-grow:1;
+    font-family: "Roboto Mono";
+}
+.CardInfo{
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    font-size:14px;
+}
+.CardInfo h3{
+    font-size:1rem;
+    margin: 0.5rem 0rem;
+    font-weight: 1000;
+    margin: 0 auto;
+    color: #424b54;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+
+.Miscellaneous{
+    width:85%;
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+}
+
+.infoRow .DateBox,.infoRow{
+    gap:1rem;
+}
+
+.infoRow .DateBox{
+    display:flex;
+    flex-direction: row;
+}
+.infoRow .DateBox p{
+    display:block;
+    background-color: #424b54;
+    border: 1px solid #424b54;
+    border-radius: 0.2rem;
+    color:#EAEAEA;
+}
+.infoRow p{
+    padding:0.3rem;
+}
+
+.BookButton{
+  display: flex; 
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  height: 2rem;
+  font-size: 1rem;
+  margin: 0 auto;
+  transition: 0.3s;
+  text-decoration: none;
+  color: #EAEAEA;
+  background-color:#424b54;
+  transition:0.3s;
+}
+
+.BookButton:hover{
+  box-shadow: 0px 0px 2px black;
+  transform: translateY(-1px);
+}
+
+
+@media (max-width: 42rem) {
+  .Card {
+    width: 100%;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: row;
+  }
+  .CardInfoBox{
+    padding: 1rem 0rem 1rem 0rem;
+  }
+  .CardInfo{
+    font-size: 13px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInOnLoad {
+  opacity: 0;
+}
+
+.fadeInOnLoad.visible {
+  animation: fadeInUp 0.7s ease-out forwards;
+}

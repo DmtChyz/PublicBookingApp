@@ -1,0 +1,183 @@
+.ShowOnMobile {
+  display: none;
+}
+
+.headerContainer {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.5rem 2rem;
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  border-bottom: 3px solid #424b54;
+  box-sizing: border-box;
+}
+
+.LogoContainer {
+  font-weight: bold;
+}
+
+.LogoContainer div {
+  font-size: 2em;
+  transition: color 0.3s ease;
+  color: rgb(30, 30, 30);
+  white-space: nowrap;
+}
+
+.LogoContainer div:hover {
+  color: #000000;
+}
+
+.ButtonContainer {
+  display: flex;
+  gap: 1.5rem;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.ButtonContainer div {
+  height: 100%;
+  width: 7rem;
+  text-align: center;
+}
+
+.ButtonContainer div a,
+.ButtonContainer div button {
+  font-size: 1rem;
+  display: block;
+  text-decoration-line: none;
+  color: #EAEAEA;
+  border: 0.15rem solid #424b54;
+  border-radius: 0.7rem;
+  padding: 0.5rem;
+  background-color: #424b54;
+  width: 100%;
+  font-family: inherit;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.ButtonContainer div a:hover,
+.ButtonContainer div button:hover {
+  box-shadow: 0px 0px 2px black;
+  transform: translateY(-1px);
+}
+
+.ButtonContainer div:hover {
+  transition: 0.3s;
+}
+
+.AuthContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 1.5rem;
+}
+
+.MenuButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  cursor: pointer;
+  background-color: white;
+  color: #424b54;
+  border: 0.2rem solid #424b54;
+  border-radius: 0.8rem;
+  font-size: 1.5rem;
+  width: 40px; 
+  height: 40px;
+}
+
+.UserIcon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.UserIcon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.UserIconRed {
+  color: #ff6b6b;
+}
+
+.UserIconGreen {
+  color: #51cf66;
+}
+
+.PopUpMenu {
+  position: absolute;
+  top: 3.5rem;
+  right: 0;
+  background-color: #EAEAEA;
+  border: 0.2rem solid #424b54;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  z-index: 100;
+  padding: 0.5rem;
+}
+
+.PopUpMenu a {
+  display: block;
+  border: #424b54 0.15rem solid;
+  border-radius: 0.4rem;
+  padding: 0.7rem 0.9rem;
+  color: #EAEAEA;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  margin: 0.5rem 0;
+  background-color: #424b54;
+  text-align: center;
+}
+
+.PopUpMenu a:hover {
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 4px black;
+}
+
+.MobileLogout {
+  display: block;
+  border: #424b54 0.15rem solid;
+  border-radius: 0.4rem;
+  padding: 0.7rem 0.9rem;
+  color: #EAEAEA;
+  transition: background-color 0.2s ease;
+  margin: 0.5rem 0;
+  background-color: #d9534f;
+  cursor: pointer;
+  text-align: center;
+}
+
+.MobileLogout:hover {
+  box-shadow: 0px 0px 4px black;
+}
+
+@media (max-width: 1024px) {
+  .ButtonContainer {
+    display: none;
+  }
+  .ShowOnMobile {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .headerContainer {
+    padding: 0.5rem 1rem;
+  }
+  .LogoContainer div {
+    font-size: 1.5rem;
+  }
+  .AuthContainer {
+    gap: 1rem;
+  }
+} 

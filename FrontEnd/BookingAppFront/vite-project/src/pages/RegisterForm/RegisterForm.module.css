@@ -1,0 +1,155 @@
+.pageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.loginCard {
+    background-color: #2A2F33; 
+    color: #EAEAEA;             
+    font-family: 'Roboto Mono', monospace;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box; 
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 25px;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.errorMessage {
+    background-color: rgba(255, 77, 77, 0.15); 
+    border: 1px solid #ff4d4d;
+    color: #ff4d4d;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box; 
+    margin-bottom: 10px;
+    white-space: pre-wrap; 
+    line-height: 1.5;
+}
+
+.fieldBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.fieldBlock label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #B0B0B0;
+}
+
+.fieldBlock input {
+    background-color: #1a1d21;
+    border: 1px solid #3e444a;
+    border-radius: 6px;
+    padding: 10px 12px;
+    color: #EAEAEA;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.95rem;
+    outline: none;
+    width: 100%; 
+    box-sizing: border-box; 
+    transition: all 0.2s ease;
+}
+
+.fieldBlock input:focus {
+    border-color: #7b818a;
+    background-color: #222529;
+}
+
+.fieldBlock input.inputError {
+    border-color: #ff4d4d;
+    background-color: rgba(255, 77, 77, 0.05);
+}
+
+.fieldBlock input.inputError:focus {
+    box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.25);
+    border-color: #ff4d4d;
+}
+
+.fieldBlock input.inputSuccess {
+    border-color: #51cf66;
+    background-color: rgba(81, 207, 102, 0.05);
+}
+
+.fieldBlock input.inputSuccess:focus {
+    box-shadow: 0 0 0 2px rgba(81, 207, 102, 0.25);
+    border-color: #51cf66;
+}
+
+.submitBtn {
+    margin-top: 15px;
+    background-color: #EAEAEA;
+    color: #2A2F33;            
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.2s;
+    width: 100%; 
+}
+
+.submitBtn:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.submitBtn:active {
+    transform: translateY(0);
+}
+
+.footerLink {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.footerLink a {
+    color: #EAEAEA;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.footerLink a:hover {
+    color: #ffffff;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fadeInOnLoad { opacity: 0; }
+.visible { animation: fadeInUp 0.5s ease-out forwards; }

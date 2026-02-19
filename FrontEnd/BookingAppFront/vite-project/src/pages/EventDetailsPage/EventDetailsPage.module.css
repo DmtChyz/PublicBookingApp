@@ -1,0 +1,238 @@
+.pageContainer {
+    min-height: 35rem;
+    width: 100%;
+    max-width: 75rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "Roboto Mono";
+    color: #B0B8BF;
+    background-color: #2A2F33;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.imgBox {
+    flex: 1;
+    overflow: hidden;
+}
+
+.imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.detailsBox {
+    box-sizing: border-box;
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    line-height: 1.1;
+    border-left: 1px black solid;
+    overflow-y: auto;
+}
+
+.TopSection {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px #EAEAEA solid;
+    width: 100%;
+}
+
+.TopSection h2 {
+    font-size: 1.5rem;
+    color: #EAEAEA;
+    word-break: break-all;
+    text-align: center;
+}
+
+.TopSection p {
+    word-break: break-word;
+    text-align: center;
+}
+
+.backSection {
+    width: 100%;
+    font-size: 1.1rem;
+    color: #EAEAEA;
+    padding-bottom: 1rem;
+    border-bottom: 1px #EAEAEA solid;
+}
+
+.miscBox {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.miscBox .dataValue {
+    border-radius: 0.5rem;
+    background-color: #424B54;
+    padding: 0.5rem;
+}
+
+.infoLine {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: 0 auto;
+}
+
+.DetailsIcon {
+    width: 1rem;
+    height: 1rem;
+    padding: 0.25rem;
+    background-color: #454c53;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.QuestionIcon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bookingSection {
+    width: 100%;
+    font-size: 1.1rem;
+    color: #EAEAEA;
+}
+
+.bookingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 0 auto;
+}
+
+.bookingForm input {
+    flex: 1;
+    background-color: #F0F0F0;
+    color: #2A2F33;
+    border-radius: 0.5rem;
+    padding: 0.1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 2px solid transparent;
+    outline: none;
+    box-shadow: none;
+}
+
+.bookingForm textarea {
+    width: 100%;
+    background-color: #F0F0F0;
+    color: #2A2F33;
+    border-radius: 0.5rem;
+    padding: 0.1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    border: 2px solid transparent;
+    outline: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.bookingForm input:focus,
+.bookingForm textarea:focus,
+.bookingForm input:hover,
+.bookingForm textarea:hover {
+    background-color: #ffffff;
+    border-color: #B0B8BF;
+}
+
+.formSection {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.bookingForm button {
+    display: flex;
+    box-sizing: border-box;
+    margin: 2rem 0rem;
+    padding: 1rem 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.bookingForm button:hover {
+    transform: scale(1.05);
+    background-color: #ffffff;
+}
+
+.tooltipText {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .pageContainer {
+        flex-direction: column;
+        min-height: auto;
+        border-radius: 0;
+    }
+
+    .imgBox {
+        height: 15rem;
+        flex-shrink: 0;
+    }
+
+    .detailsBox {
+        border-left: none;
+        padding: 1.5rem;
+    }
+
+    .TopSection h2 {
+        font-size: 1.3rem;
+    }
+
+    .backSection,
+    .bookingSection {
+        font-size: 1rem;
+    }
+    
+    .formSection label {
+        width: 120px;
+        flex-shrink: 0;
+    }
+
+    .bookingForm input,
+    .bookingForm textarea {
+        width: 100%;
+    }
+}

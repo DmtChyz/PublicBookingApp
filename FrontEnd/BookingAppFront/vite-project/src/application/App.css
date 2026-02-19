@@ -1,0 +1,22 @@
+.appContainer{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.mainWrapper {
+  background-color: #1D2128;
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContent {
+  max-width: 1600px;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}

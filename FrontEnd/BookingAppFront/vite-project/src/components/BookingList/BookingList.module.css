@@ -1,0 +1,110 @@
+.bookingsSection {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.bookingsTitle {
+    color: #EAEAEA;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #424b54;
+    padding-bottom: 0.5rem;
+}
+
+.noBookings {
+    color: #B0B0B0;
+    font-size: 1.2rem;
+}
+
+.bookingGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.bookingCard {
+    background-color: #2A2F33;
+    border: 1px solid #424b54;
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.bookingCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.eventTitle {
+    color: #51cf66;
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+}
+
+.bookingDetail {
+    color: #EAEAEA;
+    margin-bottom: 0.5rem;
+}
+
+.bookingDetail span {
+    color: #B0B0B0;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.cancelBookingBtn {
+    margin-top: auto;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: 1px solid #d9534f;
+    color: #d9534f;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cancelBookingBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: #868e96;
+    color: #868e96;
+}
+
+.cancelBookingBtn:not(:disabled):hover {
+    background-color: #d9534f;
+    color: white;
+}
+
+.error {
+    color: #ff6b6b;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 576px) {
+    .bookingGrid {
+        grid-template-columns: 1fr;
+    }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInOnLoad {
+  opacity: 0;
+}
+
+.visible {
+  animation: fadeInUp 1.4s ease-out forwards;
+}
