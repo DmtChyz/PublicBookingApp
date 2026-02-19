@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "npm: dev",
+      "type": "npm",
+      "script": "dev",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "vite",
+        "pattern": {
+          "regexp": "VITE v[\\d\\.]+  ready in \\d+ ms"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "VITE v[\\d\\.]+",
+          "endsPattern": "ready in \\d+ ms"
+        }
+      }
+    }
+  ]
+}
